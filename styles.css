@@ -1,0 +1,113 @@
+/* Defaults/Resets */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --body-text: 'Quicksand';
+    --title-text: 'DM Sans';
+    --clr-black: #1E2226;
+    --clr-dark: #1D2635;
+    --clr-accent-light: #6EA0FF;
+    --clr-accent-dark: #4A6FA5;    
+    --clr-light: #EEE5E9;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--body-text), sans-serif;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.down-arrow {
+
+}
+
+.container {
+
+}
+
+#home {
+    height: 100vh;
+    /* background-image: url('./assets/wave-haikei.svg');
+    background-repeat: no-repeat; */
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    gap: 2rem;
+    font-size: 1.15rem;
+    margin: 1rem 4rem;
+    height: 30px;
+}
+
+.navbar > li {
+    position: relative;
+}
+
+.navbar > li::after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: var(--clr-accent-light);
+    border-radius: 1rem;
+    transition: width 220ms cubic-bezier(.18,.89,.32,1.28);
+}
+
+.navbar > li:hover::after {
+    width: 100%;
+}
+
+.title {
+    font-family: var(--title-text);
+    font-size: 4rem;
+    font-weight: 100;
+    margin-left: 10vw;
+    margin-top: 46vh;
+}
+
+.title-bold {
+    font-weight: 800;
+}
+
+.home-body-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-accent-dark);
+    border-radius: 1rem;
+    padding: 1.5rem 3rem;
+}
+
+.home-body {
+    width: 44ch;
+    font-size: 1.2rem;
+}
+
+.info-card {
+    border: 1px solid red;
+}
+
+#body {
+    /* background-image: url('./assets/layered-waves-haikei.svg');
+    background-repeat: no-repeat; */
+}
