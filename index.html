@@ -8,109 +8,104 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <section id="home">
-        <ul class="navbar">
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact Me</li>
-        </ul>
-        <h1 class="title">Hi, I'm <span class="title-bold">Colton</span>,</br>
-        and I'm a <span class="title-bold">React</span> developer 👋</h1>
-        <div class="eclipse"></div>
-        <div class="down-arrow">
-            <svg width="28" height="14" viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 14C13.2046 13.9993 12.4421 13.6828 11.88 13.12L0.559986 1.76001C0.371683 1.56905 0.266948 1.31111 0.268824 1.04293C0.270699 0.774757 0.37903 0.518309 0.569986 0.330006C0.760942 0.141702 1.01888 0.0369678 1.28706 0.0388431C1.55523 0.0407185 1.81168 0.14905 1.99999 0.340006L13.29 11.66C13.3829 11.7537 13.4936 11.8281 13.6154 11.8789C13.7373 11.9297 13.868 11.9558 14 11.9558C14.132 11.9558 14.2627 11.9297 14.3846 11.8789C14.5064 11.8281 14.617 11.7537 14.71 11.66L26 0.340006C26.1883 0.153028 26.4432 0.0485122 26.7085 0.0494499C26.9739 0.0503876 27.228 0.156702 27.415 0.345006C27.602 0.53331 27.7065 0.788177 27.7055 1.05354C27.7046 1.31891 27.5983 1.57303 27.41 1.76001L16.12 13.07C15.8458 13.3577 15.5172 13.5881 15.1533 13.7477C14.7894 13.9074 14.3973 13.9931 14 14V14Z" fill="#EEE5E9"/>
-            </svg>
+    <section class="container-home">
+      <ul class="navbar">
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact Me</li>
+      </ul>
+      <h1 class="title">Hi, I'm <span class="title-bold">Colton</span>,</br>
+      and I'm a <span class="title-bold">React</span> developer 👋</h1>
+      <div class="eclipse"></div>
+      <!-- <div class="down-arrow">
+          <svg width="28" height="14" viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 14C13.2046 13.9993 12.4421 13.6828 11.88 13.12L0.559986 1.76001C0.371683 1.56905 0.266948 1.31111 0.268824 1.04293C0.270699 0.774757 0.37903 0.518309 0.569986 0.330006C0.760942 0.141702 1.01888 0.0369678 1.28706 0.0388431C1.55523 0.0407185 1.81168 0.14905 1.99999 0.340006L13.29 11.66C13.3829 11.7537 13.4936 11.8281 13.6154 11.8789C13.7373 11.9297 13.868 11.9558 14 11.9558C14.132 11.9558 14.2627 11.9297 14.3846 11.8789C14.5064 11.8281 14.617 11.7537 14.71 11.66L26 0.340006C26.1883 0.153028 26.4432 0.0485122 26.7085 0.0494499C26.9739 0.0503876 27.228 0.156702 27.415 0.345006C27.602 0.53331 27.7065 0.788177 27.7055 1.05354C27.7046 1.31891 27.5983 1.57303 27.41 1.76001L16.12 13.07C15.8458 13.3577 15.5172 13.5881 15.1533 13.7477C14.7894 13.9074 14.3973 13.9931 14 14V14Z" fill="#EEE5E9"/>
+          </svg>
+      </div> -->
+    </section>
+    <section class="container-experience">
+      <div>
+        <p><span>4+ years</span></br>software development</p>
+      </div>
+      <div>
+        <p><span>2+ years</span></br>web development</p>
+      </div>
+      <div>
+        <p><span>6+ months</span></br>currently a Creator Solutions Engineer at Zoho Corp</p>
+      </div>
+    </section>
+    <section class="container-about">
+      <h2 class="section-title">About me</h2>
+      <p class="about-body">
+        I started learning web development in March of 2020, focusing on frontend using JavaScript technologies. I started off learning a solid foundation of building websites purely through HTML and CSS, eventually sprinkling in some JavaScript. I decided to level up and learn React, and am currently learning NextJS.
+      </p>
+      <div class="container-stack">
+        <p>HTML/CSS</p>
+        <p>JavaScript</p>
+        <p>React</p>
+        <p>React Native</p>
+        <p>NodeJS</p>
+        <p>Express</p>
+        <p>MongoDB Atlas</p>
+        <p>Firebase</p>
+        <p>Figma</p>
+      </div>
+    </section>
+    <section class="container-projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-card">
+        <h3 class="project-title">Weather App</h3>
+        <p class="project-body">Created to practice working with APIs in React, and to get experience with deploying to a serverless provider.</p>
+        <div class="project-stack">
+            <p class="stack-item">React</p>
+            <p class="stack-item">Axios</p>
+            <p class="stack-item">Netlify</p>
+            <p class="stack-item">WeatherAPI</p>
+            <p class="stack-item">SVG components</p>
         </div>
-      </section>
-      <section id="body">
-        <div class="container-experience">
-            <div>
-                <p><span>4+ years</span> software development</p>
-            </div>
-            <div>
-                <p><span>2+ years</span> web development</p>
-            </div>
-            <div>
-                <p><span>6+ months</span> currently a Creator Solutions engineer at Zoho Corp</p>
-            </div>
+        <p class="primary-btn">Live site</p>
+        <p class="secondary-btn">Repo</p>
+      </div>
+      <div class="projects-card">
+        <h3 class="project-title">Discord-themed Blog</h3>
+        <p class="project-body">Replicated the Discord client to practice styling layouts, learn proper use of React hooks, and work with React Router.</p>
+        <div class="project-stack">
+            <p class="stack-item">React</p>
+            <p class="stack-item">React Router</p>
+            <p class="stack-item">Axios</p>
+            <p class="stack-item">NodeJS</p>
+            <p class="stack-item">Express</p>
+            <p class="stack-item">Netlify</p>
+            <p class="stack-item">Heroku</p>
         </div>
-        <div class="container-about">
-          <h2 class="title-bold">About me</h2>
-          <p class="about-body">
-            I started learning web development in March of 2020, focusing on frontend using JavaScript technologies. I started off learning a solid foundation of building websites purely through HTML and CSS, eventually sprinkling in some JavaScript. I decided to level up and learn React, and am currently learning NextJS.
-          </p>
-          <div class="container-stack">
-            <p>HTML/CSS</p>
-            <p>JavaScript</p>
-            <p>React</p>
-            <p>React Native</p>
-            <p>NodeJS</p>
-            <p>Express</p>
-            <p>MongoDB Atlas</p>
-            <p>Firebase</p>
-            <p>Figma</p>
-          </div>
+        <p class="primary-btn">Live site</p>
+        <p class="secondary-btn">Repo</p>
+      </div>
+      <div class="projects-card">
+        <h3 class="project-title">Park It - [WIP]</h3>
+        <p class="project-body">Check who is at your local dog park and allow others to see you and your dog when you’re at the park.</p>
+        <div class="project-stack">
+            <p class="stack-item">React Native</p>
+            <p class="stack-item">Expo</p>
+            <p class="stack-item">Firebase</p>
+            <p class="stack-item">Axios</p>
+            <p class="stack-item">SVG components</p>
         </div>
-        <div class="container-projects">
-          <h2 class="title-bold">Projects</h2>
-          <div class="projects-card">
-            <h3 class="project-title">Weather App</h3>
-            <p class="project-body">Created to practice working with APIs in React, and to get experience with deploying to a serverless provider.</p>
-            <div class="project-stack">
-                <p class="stack-item">React</p>
-                <p class="stack-item">Axios</p>
-                <p class="stack-item">Netlify</p>
-                <p class="stack-item">WeatherAPI</p>
-                <p class="stack-item">SVG components</p>
-            </div>
-            <p class="primary-btn">Live site</p>
-            <p class="secondary-btn">Repo</p>
-          </div>
-          <div class="projects-card">
-            <h3 class="project-title">Discord-themed Blog</h3>
-            <p class="project-body">Replicated the Discord client to practice styling layouts, learn proper use of React hooks, and work with React Router.</p>
-            <div class="project-stack">
-                <p class="stack-item">React</p>
-                <p class="stack-item">React Router</p>
-                <p class="stack-item">Axios</p>
-                <p class="stack-item">NodeJS</p>
-                <p class="stack-item">Express</p>
-                <p class="stack-item">Netlify</p>
-                <p class="stack-item">Heroku</p>
-            </div>
-            <p class="primary-btn">Live site</p>
-            <p class="secondary-btn">Repo</p>
-          </div>
-          <div class="projects-card">
-            <h3 class="project-title">Pack It - [WIP]</h3>
-            <p class="project-body">Check who is at your local dog park and allow others to see you and your dog when you’re at the park.</p>
-            <div class="project-stack">
-                <p class="stack-item">React Native</p>
-                <p class="stack-item">Expo</p>
-                <p class="stack-item">Firebase</p>
-                <p class="stack-item">Axios</p>
-                <p class="stack-item">SVG components</p>
-            </div>
-            <p class="secondary-btn">No repo or live demo at this time</p>
-          </div>
-          <div>
-            <h3>Contact me</h3>
-            <p>Codepen</p>
-            <p>Github</p>
-          </div>
-        </div>
-
-        <div>
-          <h2>Contact me</h2>
-          <p>
-            Feel free to reach out to me about anything! Even if you just want
-            to chat 😁
-          </p>
-        </div>
-      </section>
-    </div>
+        <p class="secondary-btn">No repo or live demo at this time</p>
+      </div>
+      <div>
+        <h3>Contact me</h3>
+        <p>Codepen</p>
+        <p>Github</p>
+      </div>
+    </section>
+    <section class="container-contact">
+      <h2 class="section-title">Contact me</h2>
+      <p>
+        Feel free to reach out to me about anything! Even if you just want
+        to chat 😁
+      </p>
+    </section>
   </body>
 </html>

@@ -8,7 +8,7 @@
     --clr-black: hsl(210, 12%, 13%);
     --clr-dark: hsl(218, 29%, 16%);
     --clr-accent-light: hsl(219, 100%, 72%);
-    --clr-accent-dark: hsl(216, 38%, 47%);    
+    --clr-accent-dark: hsl(216, 38%, 27%);    
     --clr-light: hsl(47, 21%, 92%);
 }
 
@@ -57,30 +57,26 @@ a {
     position: absolute;
     top: 10vh;
     right: 10vw;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
-    background: linear-gradient(147deg, hsla(216, 38%, 47%, 0) 33%, hsl(216, 38%, 47%) 80%);
+    background: linear-gradient(145deg, hsla(216, 38%, 47%, 0) 38%, hsl(216, 38%, 47%) 100%);
+    overflow: hidden;
 }
 
 .eclipse::after {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
+    width: 600px;
+    height: 600px;
     display: block;
     background: url('./assets/colton.png');
-    background-size: 500px 500px;
+    background-size: 600px;
     background-repeat: no-repeat;
+    transform: scale(1.2) translateY(-30px);
 }
 
-.container {
-
-}
-
-#home {
-    height: 100vh;
+.container-home {
     position: relative;
     /* background-image: url('./assets/wave-haikei.svg');
     background-repeat: no-repeat; */
@@ -140,32 +136,52 @@ a {
     font-weight: 800;
 }
 
-.home-body-container {
+.section-title {
+    font-weight: 800;
+    font-family: var(--title-text);
+    font-size: 6rem;
+}
+
+.container-experience {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: var(--clr-accent-dark);
+    border-radius: 1rem;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    width: 60%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--clr-accent-dark);
-    border-radius: 1rem;
-    padding: 1.5rem 3rem;
+    width: max-content;
+    padding: 3rem;
+    transform: translateY(98px);
 }
 
-.home-body {
-    width: 44ch;
-    font-size: 1.2rem;
+.container-experience div p {
+    width: 25ch;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.info-card {
-    border: 1px solid red;
+.container-experience div:nth-child(2){
+    border-left: 4px solid #22344F;
+    border-right: 4px solid #22344F;
 }
 
-#body {
-    /* background-image: url('./assets/layered-waves-haikei.svg');
-    background-repeat: no-repeat; */
+.container-experience div p span {
+    font-family: var(--title-text);
+    font-size: 2rem;
+    font-weight: 800;
 }
 
+.container-about {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    padding: 6rem 10vw;
+}
+
+.container-contact {
+    background-color: var(--clr-light);
+    color: var(--clr-dark)
+}
 /* Animations */
 @keyframes vertical-bob {
     0% {
