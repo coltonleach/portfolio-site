@@ -5,11 +5,11 @@
 :root {
     --body-text: 'Quicksand';
     --title-text: 'DM Sans';
-    --clr-black: #1E2226;
-    --clr-dark: #1D2635;
-    --clr-accent-light: #6EA0FF;
-    --clr-accent-dark: #4A6FA5;    
-    --clr-light: #EEE5E9;
+    --clr-black: hsl(210, 12%, 13%);
+    --clr-dark: hsl(218, 29%, 16%);
+    --clr-accent-light: hsl(219, 100%, 72%);
+    --clr-accent-dark: hsl(216, 38%, 47%);    
+    --clr-light: hsl(47, 21%, 92%);
 }
 
 *, *::before, *::after {
@@ -17,6 +17,8 @@
     padding: 0;
     margin: 0;
 }
+
+/* Actual Styles */
 
 html,
 body {
@@ -31,7 +33,46 @@ a {
 }
 
 .down-arrow {
+    position: absolute;
+    left: calc(50% - 46px);
+    /*  
+    Not quite sure why 46px is the sweet spot to make it perfectly center.
+    The element is 107.45px, so it would make more sense if it was half of that.
+    Then I thought maybe it's because of the scroll bar, but that's only 18px.
+    107.45px/2 = 53.725px +/- 18px = 71.725px/35.725px. Oh well.
+    */
+    bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: vertical-bob 3000ms ease-in-out infinite;
+}
 
+.down-arrow::before {
+    content: 'scroll for more';
+}
+
+.eclipse {
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(147deg, hsla(216, 38%, 47%, 0) 33%, hsl(216, 38%, 47%) 80%);
+}
+
+.eclipse::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: block;
+    background: url('./assets/colton.png');
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -40,6 +81,7 @@ a {
 
 #home {
     height: 100vh;
+    position: relative;
     /* background-image: url('./assets/wave-haikei.svg');
     background-repeat: no-repeat; */
 }
@@ -56,6 +98,7 @@ a {
 
 .navbar > li {
     position: relative;
+    cursor: pointer;
 }
 
 .navbar > li::after {
@@ -80,6 +123,17 @@ a {
     font-weight: 100;
     margin-left: 10vw;
     margin-top: 46vh;
+    letter-spacing: 0.075rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    left: 8vw;
+    width: 246px;
+    height: 2px;
+    display: block;
+    background-color: var(--clr-light);
 }
 
 .title-bold {
@@ -110,4 +164,14 @@ a {
 #body {
     /* background-image: url('./assets/layered-waves-haikei.svg');
     background-repeat: no-repeat; */
+}
+
+/* Animations */
+@keyframes vertical-bob {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
