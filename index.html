@@ -8,21 +8,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <p id="home">Have a great day :)</p>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
     <section class="container-home">
-      <ul class="navbar">
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact Me</li>
-      </ul>
-      <h1 class="title">Hi, I'm <span class="title-bold">Colton</span>,</br>
+      <h1 class="welcome-title">Hi, I'm <span class="title-bold">Colton</span>,</br>
       and I'm a <span class="title-bold">React</span> developer 👋</h1>
       <div class="eclipse"></div>
-      <!-- <div class="down-arrow">
-          <svg width="28" height="14" viewBox="0 0 28 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 14C13.2046 13.9993 12.4421 13.6828 11.88 13.12L0.559986 1.76001C0.371683 1.56905 0.266948 1.31111 0.268824 1.04293C0.270699 0.774757 0.37903 0.518309 0.569986 0.330006C0.760942 0.141702 1.01888 0.0369678 1.28706 0.0388431C1.55523 0.0407185 1.81168 0.14905 1.99999 0.340006L13.29 11.66C13.3829 11.7537 13.4936 11.8281 13.6154 11.8789C13.7373 11.9297 13.868 11.9558 14 11.9558C14.132 11.9558 14.2627 11.9297 14.3846 11.8789C14.5064 11.8281 14.617 11.7537 14.71 11.66L26 0.340006C26.1883 0.153028 26.4432 0.0485122 26.7085 0.0494499C26.9739 0.0503876 27.228 0.156702 27.415 0.345006C27.602 0.53331 27.7065 0.788177 27.7055 1.05354C27.7046 1.31891 27.5983 1.57303 27.41 1.76001L16.12 13.07C15.8458 13.3577 15.5172 13.5881 15.1533 13.7477C14.7894 13.9074 14.3973 13.9931 14 14V14Z" fill="#EEE5E9"/>
-          </svg>
-      </div> -->
     </section>
     <section class="container-experience">
       <div>
@@ -35,77 +31,129 @@
         <p><span>6+ months</span></br>currently a Creator Solutions Engineer at Zoho Corp</p>
       </div>
     </section>
-    <section class="container-about">
+    <section id="about" class="container-about">
       <h2 class="section-title">About me</h2>
-      <p class="about-body">
-        I started learning web development in March of 2020, focusing on frontend using JavaScript technologies. I started off learning a solid foundation of building websites purely through HTML and CSS, eventually sprinkling in some JavaScript. I decided to level up and learn React, and am currently learning NextJS.
-      </p>
-      <div class="container-stack">
-        <p>HTML/CSS</p>
-        <p>JavaScript</p>
-        <p>React</p>
-        <p>React Native</p>
-        <p>NodeJS</p>
-        <p>Express</p>
-        <p>MongoDB Atlas</p>
-        <p>Firebase</p>
-        <p>Figma</p>
+      <div class="about-body">
+        <p class="about-body-text">
+          I started learning web development in March of 2020, focusing on frontend using JavaScript technologies. I started off learning a solid foundation of building websites purely through HTML and CSS, eventually sprinkling in some JavaScript. I decided to level up and learn React, and am currently learning NextJS.
+        </p>
+        <div class="container-stack">
+          <p>HTML/CSS</p>
+          <p>JavaScript</p>
+          <p>React</p>
+          <p>React Native</p>
+          <p>NodeJS</p>
+          <p>Express</p>
+          <p>MongoDB Atlas</p>
+          <p>Firebase</p>
+          <p>Figma</p>
+        </div>
       </div>
     </section>
-    <section class="container-projects">
+    <section id="projects" class="container-projects">
       <h2 class="section-title">Projects</h2>
-      <div class="projects-card">
-        <h3 class="project-title">Weather App</h3>
-        <p class="project-body">Created to practice working with APIs in React, and to get experience with deploying to a serverless provider.</p>
-        <div class="project-stack">
-            <p class="stack-item">React</p>
-            <p class="stack-item">Axios</p>
-            <p class="stack-item">Netlify</p>
-            <p class="stack-item">WeatherAPI</p>
-            <p class="stack-item">SVG components</p>
+      <div class="project-card">
+        <div class="project-info">
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-body">Simple forecast app that has four color themes for each stage of the day (sunrise, midday, sunset, midnight), with a sun and moon for each respective stage. Created to practice working with APIs in React, and to get experience with deploying to a serverless provider.</p>
+          <div class="project-stack">
+            <p>React</p>
+            <p>Axios</p>
+            <p>Netlify</p>
+            <p>WeatherAPI</p>
+            <p>SVG components</p>
+            <p>Responsive</p>
+          </div>
+          <div class="btn-container">
+            <p class="primary-btn">Live site</p>
+            <p class="secondary-btn">Repo</p>
+          </div>
         </div>
-        <p class="primary-btn">Live site</p>
-        <p class="secondary-btn">Repo</p>
-      </div>
-      <div class="projects-card">
-        <h3 class="project-title">Discord-themed Blog</h3>
-        <p class="project-body">Replicated the Discord client to practice styling layouts, learn proper use of React hooks, and work with React Router.</p>
-        <div class="project-stack">
-            <p class="stack-item">React</p>
-            <p class="stack-item">React Router</p>
-            <p class="stack-item">Axios</p>
-            <p class="stack-item">NodeJS</p>
-            <p class="stack-item">Express</p>
-            <p class="stack-item">Netlify</p>
-            <p class="stack-item">Heroku</p>
+        <div class="project-picture-container">
+          <img class="project-picture-desktop" src="./assets/Weather app Desktop.png">
+          <img class="project-picture-mobile" src="./assets/Weather app Mobile.png">
         </div>
-        <p class="primary-btn">Live site</p>
-        <p class="secondary-btn">Repo</p>
       </div>
-      <div class="projects-card">
-        <h3 class="project-title">Park It - [WIP]</h3>
-        <p class="project-body">Check who is at your local dog park and allow others to see you and your dog when you’re at the park.</p>
-        <div class="project-stack">
-            <p class="stack-item">React Native</p>
-            <p class="stack-item">Expo</p>
-            <p class="stack-item">Firebase</p>
-            <p class="stack-item">Axios</p>
-            <p class="stack-item">SVG components</p>
+      <div class="project-card">
+        <div class="project-info">
+          <h3 class="project-title">Discord-themed Blog</h3>
+          <p class="project-body">Created because I like the UI/UX of Discord, and thought it would be fun to replicate the client to practice styling layouts, learn proper use of React hooks, and work with React Router.</p>
+          <div class="project-stack">
+            <p>React</p>
+            <p>React Router</p>
+            <p>Axios</p>
+            <p>NodeJS</p>
+            <p>Express</p>
+            <p>Netlify</p>
+            <p>Heroku</p>
+          </div>
+          <div class="btn-container">
+            <p class="primary-btn">Live site</p>
+            <p class="secondary-btn">Repo</p>
+          </div>
         </div>
-        <p class="secondary-btn">No repo or live demo at this time</p>
+        <div class="project-picture-container">
+          <img class="project-picture-desktop" src="./assets/discord blog.png">
+        </div>
       </div>
-      <div>
-        <h3>Contact me</h3>
-        <p>Codepen</p>
-        <p>Github</p>
+      <div class="project-card">
+        <div class="project-info">
+          <h3 class="project-title">Park It - [WIP]</h3>
+          <p class="project-body">Check who is at your local dog park and allow others to see you and your dog when you’re at the park. Like and dislike dogs to keep track of which dogs your's gets along with.</p>
+          <div class="project-stack">
+            <p>React Native</p>
+            <p>Expo</p>
+            <p>Firebase</p>
+            <p>Axios</p>
+            <p>SVG components</p>
+          </div>
+          <div class="btn-container">
+            <p class="tertiary-btn">No repo or live demo at this time</p>
+          </div>
+        </div>
+        <div class="project-picture-container">
+          <img class="project-picture-parkit" src="./assets/parkit1.png">
+          <img class="project-picture-parkit" src="./assets/parkit3.png">
+          <img class="project-picture-parkit" src="./assets/parkit2.png">
+        </div>
       </div>
     </section>
-    <section class="container-contact">
+    <section id="contact" class="container-contact">
       <h2 class="section-title">Contact me</h2>
-      <p>
-        Feel free to reach out to me about anything! Even if you just want
-        to chat 😁
-      </p>
+      <div class="contact-body">
+        <p class="contact-body-text">
+          Feel free to reach out to me about anything! Even if you just want to chat 😁. I'm always working on something, be it a small design in Codepen that takes 30 minutes, or a complex project that takes months.
+        </p>
+        <div class="container-icons">
+          <!-- Email -->
+            <a href="mailto:leach.colton@hotmail.com" target="_blank">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.9996 0C11.1929 0 0.000167847 11.1931 0.000167847 24.9997C0.000167847 38.8061 11.1929 50 24.9996 50C38.8062 50 49.9998 38.8061 49.9998 24.9997C49.9998 11.1931 38.8062 0 24.9996 0ZM25.0001 8.78109L39.7941 18.0062H10.2061L25.0001 8.78109ZM39.9784 32.7375H39.9769C39.9769 34.2172 38.7777 35.4162 37.2982 35.4162H12.702C11.2223 35.4162 10.0233 34.217 10.0233 32.7375V18.5932C10.0233 18.4367 10.0393 18.2845 10.0653 18.135L24.2001 26.9489C24.2174 26.9598 24.2359 26.9671 24.2537 26.9771C24.2724 26.9874 24.2914 26.9974 24.3104 27.0069C24.4102 27.0584 24.5131 27.0999 24.6182 27.1271C24.6291 27.1301 24.6399 27.1314 24.6507 27.1339C24.7661 27.1611 24.8829 27.1781 24.9996 27.1781H25.0004C25.0013 27.1781 25.0021 27.1781 25.0021 27.1781C25.1188 27.1781 25.2356 27.1616 25.3509 27.1339C25.3618 27.1313 25.3726 27.1301 25.3834 27.1271C25.4884 27.0999 25.5909 27.0584 25.6913 27.0069C25.7103 26.9974 25.7293 26.9874 25.7479 26.9771C25.7656 26.9671 25.7843 26.9598 25.8016 26.9489L39.9364 18.135C39.9624 18.2845 39.9784 18.4363 39.9784 18.5932V32.7375Z" fill="hsl(218, 29%, 16%)"/>
+            </svg></a>
+          <!-- Github -->
+            <a href="https://github.com/coltonleach" target="_blank">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.0016 0.00160194C11.1898 0.00160194 0 11.4829 0 25.633C0 36.9637 7.16295 46.5674 17.0901 49.9556C18.3449 50.1975 18.7981 49.4045 18.7981 48.7189C18.7981 48.1101 18.784 46.5001 18.7746 44.3631C11.8164 45.9074 10.3506 40.9173 10.3506 40.9173C9.21151 37.9633 7.56766 37.1703 7.56766 37.1703C5.30502 35.586 7.74736 35.6196 7.74736 35.6196C10.2538 35.7942 11.5726 38.2548 11.5726 38.2548C13.8024 42.1764 17.423 41.0423 18.8559 40.3822C19.0746 38.7306 19.7262 37.5948 20.4357 36.9621C14.8853 36.3197 9.049 34.117 9.049 24.2953C9.049 21.4903 10.0178 19.2059 11.6195 17.4117C11.3429 16.7693 10.496 14.1581 11.8398 10.6274C11.8398 10.6274 13.9321 9.94337 18.7152 13.2562C20.7169 12.6875 22.8421 12.404 24.9656 12.3896C27.0908 12.404 29.2143 12.6891 31.216 13.2562C35.971 9.94337 38.0618 10.6274 38.0618 10.6274C39.404 14.1581 38.5571 16.7677 38.3133 17.4117C39.8994 19.2059 40.8682 21.4919 40.8682 24.2953C40.8682 34.1394 35.0241 36.3101 29.4675 36.9364C30.3363 37.7038 31.1504 39.2817 31.1504 41.6766C31.1504 45.1048 31.1191 47.8666 31.1191 48.7012C31.1191 49.3676 31.5567 50.1686 32.8442 49.9107C42.8449 46.5578 50 36.946 50 25.6314C50 11.4813 38.8102 0 24.9984 0L25.0016 0.00160194Z" fill="hsl(218, 29%, 16%)"/>
+              </svg>
+            </a>
+           <!-- Codepen -->
+            <a href="https://codepen.io/issvor" target="_blank">
+              <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 2L52 18.25V35.75L27 52L2 35.75V18.25L27 2Z" stroke="hsl(218, 29%, 16%)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27 52V35.75" stroke="hsl(218, 29%, 16%)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M52 18.25L27 35.75L2 18.25" stroke="hsl(218, 29%, 16%)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 35.75L27 18.25L52 35.75" stroke="hsl(218, 29%, 16%)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27 2V18.25" stroke="hsl(218, 29%, 16%)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>             
+           <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/coltonleach" target="_blank">
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 0C11.1928 0 0 11.1928 0 25C0 38.8072 11.1928 50 25 50C38.8072 50 50 38.8072 50 25C50 11.1928 38.8072 0 25 0ZM15.6327 41.9263H8.6046V19.3136H15.6327V41.9263V41.9263ZM12.1202 16.2225C9.86752 16.2225 8.04399 14.3964 8.04399 12.1468C8.0445 9.89923 9.86752 8.07315 12.1202 8.07315C14.3668 8.07315 16.1928 9.89923 16.1928 12.1468C16.1928 14.3969 14.3662 16.2225 12.1202 16.2225ZM41.9555 41.9263H34.933V30.9294C34.933 28.3069 34.8844 24.934 31.2798 24.934C27.6246 24.934 27.0624 27.7903 27.0624 30.7396V41.9258H20.0404V19.3136H26.7811V22.4036H26.8757C27.8143 20.6256 30.1059 18.7514 33.5253 18.7514C40.6419 18.7514 41.9555 23.4348 41.9555 29.5233V41.9263Z" fill="hsl(218, 29%, 16%)"/>
+              </svg>
+            </a> 
+        </div>
+      </div>
     </section>
   </body>
 </html>

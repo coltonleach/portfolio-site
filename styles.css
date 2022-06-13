@@ -7,8 +7,9 @@
     --title-text: 'DM Sans';
     --clr-black: hsl(210, 12%, 13%);
     --clr-dark: hsl(218, 29%, 16%);
-    --clr-accent-light: hsl(219, 100%, 72%);
-    --clr-accent-dark: hsl(216, 38%, 27%);    
+    --clr-accent-400: hsl(219, 100%, 72%);
+    --clr-accent-600: hsl(216, 38%, 47%);
+    --clr-accent-800: hsl(216, 38%, 27%);    
     --clr-light: hsl(47, 21%, 92%);
 }
 
@@ -25,6 +26,7 @@ body {
     font-family: var(--body-text), sans-serif;
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    scroll-behavior: smooth;
 }
 
 a {
@@ -32,64 +34,19 @@ a {
     text-decoration: none;
 }
 
-.down-arrow {
-    position: absolute;
-    left: calc(50% - 46px);
-    /*  
-    Not quite sure why 46px is the sweet spot to make it perfectly center.
-    The element is 107.45px, so it would make more sense if it was half of that.
-    Then I thought maybe it's because of the scroll bar, but that's only 18px.
-    107.45px/2 = 53.725px +/- 18px = 71.725px/35.725px. Oh well.
-    */
-    bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    animation: vertical-bob 3000ms ease-in-out infinite;
-}
-
-.down-arrow::before {
-    content: 'scroll for more';
-}
-
-.eclipse {
-    position: absolute;
-    top: 10vh;
-    right: 10vw;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, hsla(216, 38%, 47%, 0) 38%, hsl(216, 38%, 47%) 100%);
-    overflow: hidden;
-}
-
-.eclipse::after {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    display: block;
-    background: url('./assets/colton.png');
-    background-size: 600px;
-    background-repeat: no-repeat;
-    transform: scale(1.2) translateY(-30px);
-}
-
-.container-home {
-    position: relative;
-    /* background-image: url('./assets/wave-haikei.svg');
-    background-repeat: no-repeat; */
-}
-
 .navbar {
+    position: fixed;
+    top: 0;
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
     gap: 2rem;
     font-size: 1.15rem;
-    margin: 1rem 4rem;
-    height: 30px;
+    padding: 1rem 4rem;
+    height: 60px;
+    background: var(--clr-dark);
+    width: 100%;
+    z-index: 10;
 }
 
 .navbar > li {
@@ -104,7 +61,7 @@ a {
     position: absolute;
     width: 4px;
     height: 4px;
-    background-color: var(--clr-accent-light);
+    background-color: var(--clr-accent-400);
     border-radius: 1rem;
     transition: width 220ms cubic-bezier(.18,.89,.32,1.28);
 }
@@ -113,7 +70,37 @@ a {
     width: 100%;
 }
 
-.title {
+.container-home {
+    position: relative;
+    margin-top: 50px;
+    /* background-image: url('./assets/wave-haikei.svg');
+    background-repeat: no-repeat; */
+}
+
+.eclipse {
+    position: absolute;
+    top: -350px;
+    right: 10vw;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(145deg, hsla(216, 38%, 47%, 0) 38%, hsl(216, 38%, 47%) 100%);
+    overflow: hidden;
+}
+
+.eclipse::after {
+    content: '';
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    display: block;
+    background: url('./assets/colton.png');
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    transform: scale(1.2) translateY(-30px);
+}
+
+.welcome-title {
     font-family: var(--title-text);
     font-size: 4rem;
     font-weight: 100;
@@ -122,10 +109,10 @@ a {
     letter-spacing: 0.075rem;
 }
 
-.title::after {
+.welcome-title::after {
     content: '';
-    position: absolute;
-    left: 8vw;
+    position: relative;
+    left: -32px;
     width: 246px;
     height: 2px;
     display: block;
@@ -143,16 +130,18 @@ a {
 }
 
 .container-experience {
+    position: relative;
     display: flex;
     gap: 1rem;
     align-items: center;
-    background: var(--clr-accent-dark);
+    background: var(--clr-accent-800);
     border-radius: 1rem;
     margin-left: auto;
     margin-right: auto;
     width: max-content;
     padding: 3rem;
-    transform: translateY(98px);
+    top: 98px;
+    box-shadow: 0px 6px 10px 0px hsla(0, 0%, 0%, 0.4);
 }
 
 .container-experience div p {
@@ -178,10 +167,188 @@ a {
     padding: 6rem 10vw;
 }
 
+.about-body {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-body-text {
+    width: 45ch;
+    font-size: 1.5rem;
+}
+
+.about-body-text::after {
+    content: '';
+    position: relative;
+    margin-top: 1rem;
+    left: -32px;
+    width: 246px;
+    height: 2px;
+    display: block;
+    background-color: var(--clr-dark);
+}
+
+.container-stack {
+    width: 45ch;
+}
+
+.container-stack p {
+    display: inline-block;
+    border: 1px solid hsla(218, 29%, 16%, 0.45);
+    border-radius: 5px;
+    text-align: center;
+    margin: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.3rem;
+    font-family: var(--title-text);
+    font-weight: 500;
+}
+
+.container-projects {
+    padding: 6rem 10vw;
+}
+
+.project-card {
+    background-color: #2A3D5E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 2rem 3.5rem;
+    border-radius: 1.5rem;
+    gap: 4rem;
+    width: 1180px;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350px;
+}
+
+.project-picture-container {
+    position: relative;
+}
+
+.project-picture-desktop {
+    border: 6px solid #1D2635;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.project-picture-mobile {
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+    border: 6px solid #1D2635;
+    border-radius: 8px;
+    height: 200px;
+}
+
+.project-picture-parkit {
+    border: 6px solid #1D2635;
+    border-radius: 8px;
+    height: 285px;
+}
+
+.project-title {
+    font-size: 2.25rem;
+}
+
+.project-body {
+    font-size: 1.25rem;
+    width: 40ch;
+}
+
+.project-stack {
+    width: 45ch;
+}
+
+.project-stack p {
+    display: inline-block;
+    border: 1px solid var(--clr-light);
+    border-radius: 0.25rem;
+    margin: 0.25rem 0.125rem;
+    padding: 0.25rem 0.5rem;
+    color: hsl(216, 15%, 81%);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+.primary-btn {
+    background-color: var(--clr-accent-600);
+    width: max-content;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    border: 2px solid var(--clr-accent-600);
+    width: max-content;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.tertiary-btn {
+    color: var(--clr-black);
+    border: 2px solid var(--clr-dark);
+    width: max-content;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: not-allowed;
+}
+
 .container-contact {
     background-color: var(--clr-light);
-    color: var(--clr-dark)
+    color: var(--clr-dark);
+    height: 50vh;
+    padding: 6rem 10vw;
 }
+
+.contact-body {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-body-text {
+    font-size: 1.5rem;
+    width: 45ch;
+}
+
+.contact-body-text::after {
+    content: '';
+    position: relative;
+    margin-top: 1rem;
+    left: -32px;
+    width: 246px;
+    height: 2px;
+    display: block;
+    background-color: var(--clr-dark);
+}
+
+.container-icons{
+    width: 45ch;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-icons a {
+    transition: transform 220ms cubic-bezier(.18,.89,.32,1.28);
+}
+
+.container-icons a:hover {
+    transform: translateY(-10px);
+}
+
 /* Animations */
 @keyframes vertical-bob {
     0% {
