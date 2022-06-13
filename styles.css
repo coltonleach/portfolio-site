@@ -34,6 +34,8 @@ a {
     text-decoration: none;
 }
 
+/* Navbar */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -69,6 +71,8 @@ a {
 .navbar > li:hover::after {
     width: 100%;
 }
+
+/* First section: home */
 
 .container-home {
     position: relative;
@@ -129,6 +133,8 @@ a {
     font-size: 6rem;
 }
 
+/* Experience card */
+
 .container-experience {
     position: relative;
     display: flex;
@@ -160,6 +166,8 @@ a {
     font-size: 2rem;
     font-weight: 800;
 }
+
+/* Second section: About */
 
 .container-about {
     background-color: var(--clr-light);
@@ -203,6 +211,8 @@ a {
     font-family: var(--title-text);
     font-weight: 500;
 }
+
+/* Third section: Projects */
 
 .container-projects {
     padding: 6rem 10vw;
@@ -256,7 +266,7 @@ a {
     font-size: 2.25rem;
 }
 
-.wip {
+.wip-label {
     color: var(--clr-accent-600);
     font-style: italic;
     font-size: 1.25rem;
@@ -286,7 +296,6 @@ a {
     gap: 1rem;
     font-size: 1.25rem;
 }
-
 
 .primary-btn {
     background-color: var(--clr-accent-600);
@@ -319,6 +328,8 @@ a {
 .secondary-btn:hover {
     transform: translateY(-8px);
 }
+
+/* Fourth section: Contact */
 
 .container-contact {
     background-color: var(--clr-light);
@@ -361,14 +372,4 @@ a {
 
 .container-icons a:hover {
     transform: translateY(-10px);
-}
-
-/* Animations */
-@keyframes vertical-bob {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
