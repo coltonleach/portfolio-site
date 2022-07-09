@@ -373,3 +373,176 @@ a {
 .container-icons a:hover {
     transform: translateY(-10px);
 }
+
+@media only screen and (max-width: 450px){
+    .navbar,
+    #home {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    /* First section: home */
+    
+    .container-home {
+        padding-bottom: calc(634px * 0.5); /* height of the experience bar in half */
+    }
+
+    .eclipse {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+        height: 300px;
+        width: 300px;
+    }
+
+    .eclipse::after {
+        top: 20px;
+        width: 300px;
+        height: 300px;
+        background-size: 300px;
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+        letter-spacing: 0;
+        margin-top: 0;
+    }
+
+    .welcome-title::after{
+        height: 1px;
+    }
+
+    /* Experience card */
+
+    .container-experience {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 568px;
+        flex-direction: column;
+    }
+
+    .container-experience div p {
+        width: 16ch;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .container-experience div:nth-child(2){
+        border-top: 4px solid #22344F;
+        border-bottom: 4px solid #22344F;
+        border-left: none;
+        border-right: none;
+    }
+
+    .container-experience div p span {
+        font-family: var(--title-text);
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    /* Second section: About */
+
+    .container-about {
+        padding: calc(634px * 0.55) 1rem 2rem 1rem; /* height of the experience bar in half */
+    }
+
+    .about-body {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-body-text {
+        margin: 0 auto;
+        width: 21ch;
+    }
+
+    .about-body-text::after {
+        height: 1px;
+    }
+
+    .container-stack {
+        width: 30ch;
+    }
+
+    /* Third section: Projects */
+
+    .container-projects {
+        padding: 1rem; /* height of the experience bar in half */
+    }
+
+    .project-card {
+        flex-direction: column;
+        width: 80%;
+        margin: 3rem auto;
+        padding: 0;
+    }
+
+    .project-info {
+        text-align: center;
+        gap: 1rem;
+        margin: 1.5rem;
+        height: 100%;
+    }
+
+    .project-body {
+        margin: 0 auto;
+        width: 22ch;
+    }
+
+    .project-stack {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .project-picture-container{
+        display: none;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .tertiary-btn {
+        width: 100%;
+    }
+
+    /* Fourth section: Contact */
+
+    .container-contact {
+        padding: 2rem 1rem;
+    }
+
+    .contact-body {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-body-text {
+        margin: 0 auto;
+        width: 22ch;
+    }
+
+    .contact-body-text::after {
+        display: none;
+    }
+
+    .container-icons {
+        width: 100%;
+    }
+
+}
