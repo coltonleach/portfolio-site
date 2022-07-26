@@ -11,6 +11,9 @@
     --clr-accent-600: hsl(216, 38%, 47%);
     --clr-accent-800: hsl(216, 38%, 27%);    
     --clr-light: hsl(47, 21%, 92%);
+    --eclipse-size: 30vw;
+    --section-title: 6rem;
+    --container-padding: 6rem 10vw;
 }
 
 *, *::before, *::after {
@@ -85,8 +88,8 @@ a {
     position: absolute;
     top: -350px;
     right: 10vw;
-    width: 30vw;
-    height: 30vw;
+    width: var(--eclipse-size);
+    height: var(--eclipse-size);
     border-radius: 50%;
     background: linear-gradient(145deg, hsla(216, 38%, 47%, 0) 38%, hsl(216, 38%, 47%) 100%);
     overflow: hidden;
@@ -95,11 +98,11 @@ a {
 .eclipse::after {
     content: '';
     position: absolute;
-    width: 30vw;
-    height: 30vw;
+    width: var(--eclipse-size);
+    height: var(--eclipse-size);
     display: block;
     background: url('./assets/colton.png');
-    background-size: 30vw;
+    background-size: var(--eclipse-size);
     background-repeat: no-repeat;
     transform: scale(1.2) translateY(-30px);
 }
@@ -130,7 +133,7 @@ a {
 .section-title {
     font-weight: 800;
     font-family: var(--title-text);
-    font-size: 6rem;
+    font-size: var(--section-title);
 }
 
 /* Experience card */
@@ -172,7 +175,7 @@ a {
 .container-about {
     background-color: var(--clr-light);
     color: var(--clr-dark);
-    padding: 6rem 10vw;
+    padding: var(--container-padding);
 }
 
 .about-body {
@@ -215,7 +218,7 @@ a {
 /* Third section: Projects */
 
 .container-projects {
-    padding: 6rem 10vw;
+    padding: var(--container-padding);
 }
 
 .project-card {
@@ -243,7 +246,7 @@ a {
 
 .project-picture-desktop {
     border: 6px solid #1D2635;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     width: 400px;
 }
 
@@ -252,13 +255,13 @@ a {
     bottom: -20px;
     right: -30px;
     border: 6px solid #1D2635;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     height: 200px;
 }
 
 .project-picture-parkit {
     border: 6px solid #1D2635;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     height: 285px;
 }
 
@@ -335,7 +338,7 @@ a {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     height: 50vh;
-    padding: 6rem 10vw;
+    padding: var(--container-padding);
 }
 
 .contact-body {
@@ -374,14 +377,101 @@ a {
     transform: translateY(-10px);
 }
 
-@media only screen and (max-width: 450px){
-    .navbar,
-    #home {
+@media only screen and (max-width: 1230px) {
+    :root {
+        --container-padding: 6rem 5vw;
+        --eclipse-size: 350px;
+        --section-title: 4rem;
+    }
+
+    /* First section: home */
+
+    .eclipse::after {
+        top: 20px;
+    }
+
+    /* Experience card */
+
+    .container-experience {
+        padding: 2rem;
+        border-radius: 0.75rem;
+        top: 73px;
+    }
+
+    .container-experience div p {
+        font-size: 1.125rem;
+    }
+
+    .container-experience div p span {
+        font-size: 1.75rem;
+    }
+
+    /* Third Section: projects */
+
+
+    .project-card {
+        width: 803px;
+        border-radius: 1rem;
+        padding: 1rem 3rem;
+    }
+
+    .project-info {
+        justify-content: space-evenly;
+    }
+
+    .project-picture-desktop {
+        width: 300px;
+        border-radius: 0.3rem;
+    }
+    
+    .project-picture-mobile {
+        height: 150px; 
+        border-radius: 0.3rem;
+    }
+
+    .project-picture-parkit {
+        border-radius: 0.3rem;
+        height: 285px;
+    }
+
+    .project-picture-parkit:nth-of-type(2){
         display: none;
     }
 
-    .section-title {
-        font-size: 3rem;
+    .project-title {
+        font-size: 1.75rem;
+    }
+
+    .project-body {
+        font-size: 1.125rem;
+        width: 32ch;
+    }
+
+    .project-stack {
+        width: 36ch;
+    }
+
+    .wip-label {
+        font-size: 1rem;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .tertiary-btn {
+        padding: 0.5rem 1.125rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    :root {
+        --eclipse-size: 300px;
+        --section-title: 3rem;
+    }
+
+    .navbar,
+    #home {
+        display: none;
     }
 
     /* First section: home */
@@ -397,15 +487,10 @@ a {
         margin-left: auto;
         margin-right: auto;
         margin-top: 5rem;
-        height: 300px;
-        width: 300px;
     }
 
     .eclipse::after {
         top: 20px;
-        width: 300px;
-        height: 300px;
-        background-size: 300px;
     }
 
     .welcome-title {
