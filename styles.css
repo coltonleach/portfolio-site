@@ -564,6 +564,10 @@ section * {
     display: none;
   }
 
+  .inactive {
+    transform: translateY(0px);
+  }
+
   /* First section: home */
 
   .container-home {
@@ -697,6 +701,10 @@ section * {
   .secondary-btn,
   .tertiary-btn {
     width: 100%;
+  }
+
+  .date {
+    display: none;
   }
 
   /* Fourth section: Contact */
