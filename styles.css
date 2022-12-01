@@ -45,7 +45,7 @@ a {
 }
 
 section * {
-  transition: transform 1000ms 200ms ease;
+  transition: transform 1000ms ease;
 }
 
 .inactive {
