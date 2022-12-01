@@ -2,13 +2,14 @@ const sections = document.querySelectorAll('.inactive')
 
 const options = {
   root: null, //viewport
-  threshold: 0.2, //Percentage of element required to be visisble in viewport for observer to fire
+  threshold: 0.1, //Percentage of element required to be visisble in viewport for observer to fire
   rootMargin: '-20%',
 }
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.remove('inactive')
+    if (entry.isIntersecting)
+      entry.target.classList.remove('inactive', 'left', 'right')
   })
 }, options)
 
