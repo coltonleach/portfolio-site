@@ -8,7 +8,6 @@ const options = {
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log('intersecting')
       entry.target.classList.remove('inactive', 'left', 'right')
       observer.unobserve(entry.target)
     }
